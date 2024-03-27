@@ -1,0 +1,12 @@
+height(r) - of a tree
+In: root r of a (sub) tree
+Out: height of the tree
+
+if r is a leaf then return 0
+else {
+	mh = 0
+	for each child c or r do
+	h = height(c)
+	if h > mh then mh = h
+     }
+     return mh + 1

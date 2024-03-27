@@ -1,0 +1,14 @@
+hasCycles(u)
+Out: true if hasCycles, else false
+Mark(u)
+for each edge (u,v) incident on u do {
+    if (u,v) not labelled then
+	if v is not marked then
+	    label (u,v) as discovery
+	    if hasCycles(v) = true:
+		return true
+	else 
+	    label (u,v) as back
+	    return true
+} return false
+

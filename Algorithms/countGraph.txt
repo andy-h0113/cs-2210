@@ -1,0 +1,9 @@
+count(u)
+Out: #nodes reachable from u
+Mark(u);
+c = 1;
+for each edge (u,v) incident on u do
+    if v is not mark, then
+	c = count(v) + c;
+return c;
+

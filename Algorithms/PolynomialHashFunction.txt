@@ -1,0 +1,8 @@
+polynomialHashFunction("Ck-1, Ck-2, ..., C0", x, M)
+Input: String"Ck-1, Ck-2, ..., C0", value x, size M of hash table (prime)
+Output: hash code (val)
+
+val = (int) Ck-1
+for (i = (k-2); i > 0; i++)
+	val = (val * x + (int)C[i]) % M
+return val

@@ -1,0 +1,16 @@
+topologicalOrdering(G) //O(n+m)
+Out: topological ordering for nodes of G
+Q = emptyQueue
+for each node u of G do 
+    if u.inDegree==0, then
+	Q.enqueue(u)
+while Q is not empty, do {
+    u = Q.dequeue
+    print(u)
+    for each edge (u,v), do{
+	v.inDegree = v.inDegree - 1
+	if v.inDegree==0, then
+	    Q.enqueue(v)
+    }
+}
+

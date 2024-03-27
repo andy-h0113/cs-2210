@@ -1,0 +1,11 @@
+put_bt(r,k,o) //O(d*logdn)
+Search for k to find lowest insertion internal node v;
+Add new data item (k,o) at node v;
+while node v overflows do {
+    if v is the root then
+	Create a new empty root and set as parent of v;
+    Split v around middle key k', move k' to parent, and
+	update parent's children;
+    v = parent of v;
+}
+

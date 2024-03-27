@@ -1,0 +1,11 @@
+Algorithm: totalLeaves(r, level)
+In: root of a (sub) tree, integer value level
+Out: sum of all levels of all the leaves of the tree
+	
+	if r.isLeaf(), then return level {
+	} else {
+		for each child c of r do {
+			sum += totalLeaves(c, ++level)
+		}
+		return sum
+	}	

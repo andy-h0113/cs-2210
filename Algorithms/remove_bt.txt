@@ -1,0 +1,13 @@
+remove_bt(r,k) //O(d*logdn)
+Find the node v storing key k;
+Remove(k,o) from v replacing it with successor if need;
+while node v underflows do {
+    if v is the root then
+	make the first child of v the new root;
+    else if a sibling has at least [d/2] keys then
+	perform a transfer operation;
+    else
+	perform a fusion operation;
+	v = parent of v;
+}
+

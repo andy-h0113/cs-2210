@@ -1,0 +1,8 @@
+putAVL (r, k, data) --> O(logn)
+p = put(r, k, data) //BST Insertion (O(logn))
+while(p != null) and (height dif of subtrees of p <= 1)
+    p = p.parent
+if (p != null) then
+    rebalance subtree rooted at p with rotation
+
+

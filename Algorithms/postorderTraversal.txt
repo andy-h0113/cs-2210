@@ -1,0 +1,7 @@
+postorder(r)
+In: root r of a tree
+Out: nodes in postorder
+
+For each child c of r do
+	postorder(c)
+visit(r)

@@ -1,0 +1,9 @@
+inorder(r)
+In: root r of a tree
+Out: nodes in i order
+
+if r is a leaf then visit(r)
+else {
+	inorder(r.leftChild)
+	visit(r)
+	inorder(r.rightChild)

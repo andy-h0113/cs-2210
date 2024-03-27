@@ -1,0 +1,11 @@
+DFS(u) // 
+Mark(u);
+For every edge (u, v) do
+    if (u,v) has not been labelled then
+	if v is not marked then
+	    label (u,v) as discovery;
+	    DFS(v);
+	else:
+	    label (u,v) back
+
+

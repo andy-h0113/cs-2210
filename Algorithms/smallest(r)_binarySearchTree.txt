@@ -1,0 +1,11 @@
+smallest(r)
+In: Root r of a binary search tree
+Out: Node storing the smallest key or null if no data
+
+if r is a leaf then return null
+else {
+	p = r
+	while (p isn't a leaf)
+		p = p.leftChild()
+	return p.parent
+}

@@ -1,0 +1,14 @@
+get(r, k)
+In: Root r of a BST, key k
+Out: Node storing k; if k not in tree,
+	leaf node where k should've been
+
+if r is a leaf then return r
+else {
+	if (r.key == k) then return r
+	else {
+		if (k < r.key) then
+			return get(r.leftChild, K)
+		else return get(r.rightChild, K)
+	}
+     }

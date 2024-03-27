@@ -1,0 +1,10 @@
+get(k) - Dictionary(Hash Map) - Separate Chaining
+Input: Key k
+Output: Record with key k, or null if no record with key k
+
+pos = hashFunction(k)
+p = hashMap[pos]
+while (p != null) and (p.getKey() != k)
+	p = p.getNext()
+if (p == null) then return null
+else return p.getRecord()

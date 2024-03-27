@@ -1,0 +1,8 @@
+removeAVL(r,k)
+p = remove(r,k) //from BST
+while (p != null) do {
+    if subtrees of p differ in height > 1
+	rebalance subtree from p
+    p = p.parent
+}
+

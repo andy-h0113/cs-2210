@@ -1,0 +1,13 @@
+remove2_4(r,k) // O(logn)
+Find the node v storing k using get(k);
+Remove (k, o) from v replacing it with successor if need;
+while node v underflows do {
+    if v is the root then
+	make the first child of v the new root
+    else if a sibling has at least 2 keys then
+ 	perform a transfer operation
+    else
+	perform a fusion operation
+	v = parent of v
+}
+

@@ -1,0 +1,13 @@
+path(s,d)
+Out: True if there's a path from s to d
+Mark(s);
+P.push(s);
+if s==d, then return true;
+for every edge (s,u) incident on s do {
+    if u is not marked then
+	if path(u,d)==true, return true;
+}
+unMark(s); // optional - changes big "O"
+P.pop();
+return false;
+

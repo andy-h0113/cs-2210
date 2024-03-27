@@ -1,0 +1,7 @@
+preorder(r)
+In: root r of a tree
+Out: nodes in preorder
+
+visit(r)
+For each child c of r do
+	preorder(c)

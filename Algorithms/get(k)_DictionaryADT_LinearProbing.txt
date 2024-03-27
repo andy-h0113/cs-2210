@@ -1,0 +1,9 @@
+get(k) - Dictionary(Hash Map) - Linear Probing
+Input: Key k
+Output: Record with key k, or null if no record with key k
+
+pos = hashFunction(k)
+while (hashMap[pos] != null) and (hashMap[pos].getKey() != k)
+	pos = (pos + 1) % M
+if hashMap[pos] == null then return null
+else return hashMap[pos].getRecord()

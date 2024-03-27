@@ -1,0 +1,22 @@
+remove(r, k) //O(height) from get(r,k)
+p = get(r, k)
+if (p is a leaf) then return false
+else {
+    if (a child c of p is a leaf) then
+	Let c' be other child of p
+	    p' = p.parent
+	    if (p' != null) then
+		set c' as child of p' instead of p
+  	    else {
+		set c' as root of the tree
+	    }
+    else {
+	s = smallest(p.rightChild)
+	copy record from s to p
+	remove (s, s.key)
+    }
+    return true
+}	
+
+
+

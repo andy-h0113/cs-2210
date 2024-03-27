@@ -1,0 +1,14 @@
+put(r, k, d)
+In: Root r of a BST, record (k, d)
+Out: True if record was added, else false
+
+p = get(r, k)
+if (p is internal) then return false
+else {
+	store(k, d) in p
+	p.leftChild = new node
+	p.rightChild = newNode
+	p.leftChild.parent = p
+	p.rightChild.parent = p
+	return true
+     }

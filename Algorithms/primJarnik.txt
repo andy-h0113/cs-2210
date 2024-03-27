@@ -1,0 +1,23 @@
+Prim-Jarnik(s)
+Out: {minimum spanning tree}
+for each node u of G do {
+    u.d = infinity
+    u.p = null
+}
+s.d = 0
+for i=1 to n do {
+    min = infinity
+    for each node u of G do 
+	if u.marked==false then
+	    if u.d<min then {
+		min = u.d
+		uMin = u
+	    }
+    uMin.marked = true
+    for each edge (uMin, v) incident on uMin do
+	if v.marked==false then
+	    if length(uMin,v) < v.d, then{
+		v.d = length(uMin, v)
+		v.p = uMin
+	    }
+}

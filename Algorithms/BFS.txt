@@ -1,0 +1,21 @@
+BFS(s)
+Q = empty queue
+Q.enqueue(s)
+Mark(s)
+while Q is not empty do {
+    u = Q.dequeue()
+    visit(u)
+    for each edge (u,v) incident on u, do {
+	if (u,v) is not labelled, then
+	    if v is marked, then {
+	 	label (u,v as cross);
+	    }else{
+		label (u,v) as discovery
+		Q.enqueue(v)
+		Mark(v)
+		v.p = u
+	    }
+    }
+}
+
+

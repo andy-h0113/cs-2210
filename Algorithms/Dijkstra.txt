@@ -1,0 +1,27 @@
+Dijkstra(G,s)
+Out: Shortest paths from s
+// Initialize
+for each vertex u of G do {
+    u.d = infinity
+    u.p = null
+    u.marked = false
+}
+s.d = 0
+// Main loop
+for i<0 to n-1 do {
+    min = infinity
+    // Find unmarked minimum vertex
+    for each vertex v of G do 
+	if (v.marked==false) and (v.d<min) then {
+	    min = v.d
+	    u = v
+	}
+    u.marked = true
+    // Relax all edges incident on vertex u
+    for each edge(u,v) incident on u do
+	if u.d+length(u,v) < v.d then {
+	    v.d = u.d + length(u,v)
+	    v.p = u
+    }
+}
+	    

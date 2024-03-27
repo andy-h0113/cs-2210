@@ -1,0 +1,11 @@
+BinarySearch (L, x, first, last)
+Input: Array L of size n and value x
+Output: Position i. position of x or
+		    -1 if x not in L
+if (first < last) then return -1
+else mid = roundDown((first+last) / 2)
+
+if x = L[mid] then return mid
+else if x < L[mid] then 
+	return BinarySearch(L, x, first, mid-1)
+     else return BinarySearch(L, x, mid+1, last)

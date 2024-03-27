@@ -1,0 +1,9 @@
+getMT(r,k) //O(height * logd)
+if r is leaf, then return null
+else {
+    use binary search to find i where:
+       -r.keys[i] = k or
+       -r.keys[i] < k < r.keys[i + 1]
+    if k = r.keys[i] then return r.data[i]
+    else return get(r.child[i],k)
+
